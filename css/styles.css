@@ -1,0 +1,78 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body{
+	font-family: arial;
+	display: flex;
+	flex-direction: column;
+}
+
+img	{
+	max-width: 100%;
+}
+
+.encabezado{
+	padding: 2rem 0;
+	display: flex;
+	justify-content: center;
+}
+
+.navegacion{
+	background-color: #05bae6;
+}
+
+.navegacion ul{
+	max-width: 800px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	list-style: none;
+	padding: 0;
+}
+
+.navegacion ul li{
+	padding: 1rem 0;
+}
+
+.navegacion ul li a{
+	color: #fff;
+	text-decoration: none;
+}
+
+.navegacion ul li a:hover{
+	text-decoration: underline;
+}
+
+.contenido-principal{
+	margin: 0 auto;
+	max-width: 50%;
+}
+
+.sidebar{
+	background-color: #e5e5e5;
+	padding: 2rem;
+}
+
+@media (min-width: 768px){
+	.contenido{
+		display: flex;
+	}
+	.sidebar{
+		flex: 0 0 20%;
+		order: -1;
+	}
+	.derecha{
+		order: 1;
+	}
+
+}
+
+.footer{
+	background-color: #db008d;
+	color: #fff;
+	text-align: center;
+}
